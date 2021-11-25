@@ -1,0 +1,10 @@
+<div class="container">
+  <p
+    [ngClass]="task.marked ? 'marked' : 'unmarked'"
+    *ngFor="let task of tasks"
+    (dblclick)="onClick(task)"
+  >
+    {{ task.title }}
+    <button (click)="onDelete(task.id)" title="Excluir tarefa">x</button>
+  </p>
+</div>

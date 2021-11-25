@@ -1,0 +1,26 @@
+.header {
+  display: block;
+  background: linear-gradient(#222, #244);
+  box-shadow: 0 2px 5px #222;
+  color: #ccc;
+
+  display: flex;
+  align-items: center;
+  height: 80px;
+
+  h1 {
+    font-size: 24px;
+    margin: 0 40px 0 20px;
+  }
+
+  nav {
+    ul {
+      display: flex;
+      gap: 20px;
+
+      li {
+        list-style-type: none;
+      }
+    }
+  }
+}
