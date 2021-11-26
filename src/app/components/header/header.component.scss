@@ -6,21 +6,11 @@
 
   display: flex;
   align-items: center;
+  justify-content: center;
   height: 80px;
 
   h1 {
     font-size: 24px;
     margin: 0 40px 0 20px;
-  }
-
-  nav {
-    ul {
-      display: flex;
-      gap: 20px;
-
-      li {
-        list-style-type: none;
-      }
-    }
   }
 }

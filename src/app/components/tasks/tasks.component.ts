@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Task } from './Task';
 
 @Component({
@@ -7,47 +7,19 @@ import { Task } from './Task';
   styleUrls: ['./tasks.component.scss'],
 })
 export class TasksComponent implements OnInit {
-  tasks = [
-    {
-      id: 1,
-      title: 'Aprender sobre components',
-      marked: false,
-    },
-    {
-      id: 2,
-      title: 'Aprender sobre methods',
-      marked: false,
-    },
-    {
-      id: 3,
-      title: 'Aprender sobre methods',
-      marked: false,
-    },
-    {
-      id: 4,
-      title: 'Aprender sobre methods',
-      marked: false,
-    },
-    {
-      id: 5,
-      title: 'Aprender sobre methods',
-      marked: false,
-    },
-    {
-      id: 6,
-      title: 'Aprender sobre methods',
-      marked: false,
-    },
-  ];
+  @Input() tasks: Task[];
+  @Output() deleteTask = new EventEmitter();
+  @Output() markTask = new EventEmitter();
+
   constructor() {}
 
   ngOnInit(): void {}
 
   onClick(task: Task) {
-    task.marked = !task.marked;
+    this.markTask.emit(task.id);
   }
 
   onDelete(id: number) {
-    this.tasks = this.tasks.filter((task) => task.id !== id);
+    this.deleteTask.emit(id);
   }
 }

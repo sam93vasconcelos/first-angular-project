@@ -1,2 +1,7 @@
 <app-header></app-header>
-<app-tasks></app-tasks>
+<app-new-task (addTask)="onAddTask($event)"></app-new-task>
+<app-tasks
+  [tasks]="tasks"
+  (deleteTask)="onDeleteTask($event)"
+  (markTask)="onMarkTask($event)"
+></app-tasks>

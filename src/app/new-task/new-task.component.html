@@ -1,0 +1,6 @@
+<div class="form-new-task">
+  <form #newTaskForm="ngForm" (ngSubmit)="onSubmit(newTaskForm)">
+    <input ngModel name="task" type="text" placeholder="Nova Tarefa" />
+    <button type="submit">Salvar</button>
+  </form>
+</div>

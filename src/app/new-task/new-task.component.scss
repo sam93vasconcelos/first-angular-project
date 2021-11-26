@@ -1,0 +1,38 @@
+.form-new-task {
+  display: block;
+  margin: 20px;
+
+  form {
+    width: 100%;
+    input {
+      display: inline-block;
+      width: 80%;
+      padding: 0 10px;
+
+      &:focus {
+        outline: transparent;
+        border: solid 1px #488;
+        box-shadow: 0 0 5px #488;
+      }
+    }
+
+    button {
+      width: 20%;
+      background: linear-gradient(90deg, #222, #244);
+      color: #fff;
+      transition: 0.1s;
+      cursor: pointer;
+
+      &:hover {
+        filter: brightness(1.5);
+      }
+    }
+
+    input,
+    button {
+      line-height: 30px;
+      border: solid 1px #44444488;
+      border-radius: 0;
+    }
+  }
+}
